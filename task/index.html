@@ -17,10 +17,19 @@
   <meta name="description" content="">
   <meta name="author" content="Whitney Yan">
   <meta name="keywords" content="">
-  <title>标签 - markdown | Solaris Star</title>
+  <title>task | Solaris Star</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -42,7 +51,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -171,22 +180,16 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-    
-      
-      <p class="h5">2020</p>
-    
-    <a href="/2020/07/01/markdown/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">markdown基础语法总结</span>
-      <span style="float: right;">07-01</span>
-    </a>
-  
+<div class="page-content">
+  <h1 id="基础工具学习"><a href="#基础工具学习" class="headerlink" title="基础工具学习"></a>基础工具学习</h1><ul>
+<li>[] markdown <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1></li>
+<li><input checked="" disabled="" type="checkbox"> 报名百度前端学院</li>
+<li>[] html</li>
+<li>[] css</li>
+<li>[] javascript</li>
+</ul>
+
 </div>
-
-
 
               </div>
             </div>
@@ -303,7 +306,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签 - markdown&nbsp;",
+        "task&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -317,6 +320,21 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
 
 
 
