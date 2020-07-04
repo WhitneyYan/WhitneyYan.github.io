@@ -11,6 +11,20 @@
     <content type="html"><![CDATA[<h1 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h1><ul><li>打开高亮：文件<code>File</code> -&gt; 偏好设置<code>Preference</code> -&gt; Markdown<code>Markdown</code> -&gt; 高亮<code>highlight</code></li><li>使用<code>==</code>包裹文本即可。<br>== 大概是无法显示的高亮内容 ==<h1 id="emoji"><a href="#emoji" class="headerlink" title="emoji"></a>emoji</h1></li><li>使用语法（以:smile:为例）<code>smile</code>。</li><li>可以通过按<code>ESA</code>键触发emoji的自动补全建议，也可以通过设置<code>偏好设置</code>来自动触发建议。同时，也可以在菜单栏中的<code>编辑</code>-&gt;<code>Emoji &amp; Symbols</code>直接插入UTF-8字符（仅限于macOS）。</li><li>可通过更改渲染器实现emoji功能<del>但我懒得换了</del><h1 id="上标及下标"><a href="#上标及下标" class="headerlink" title="上标及下标"></a>上标及下标</h1></li><li>在偏好设置中打开</li><li>上标使用<code>^</code>包裹，下标使用<code>~</code>包裹，例：<pre><code class="hljs angelscript">H~<span class="hljs-number">2</span>~Ox^<span class="hljs-number">2</span></code></pre>O<sup>2</sup><h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1></li><li>创建脚注：<code>[^脚注]</code>，<code>[^脚注]：脚注文本。</code><pre><code class="hljs css">此处有脚注<span class="hljs-selector-attr">[^脚注]</span>。<span class="hljs-selector-attr">[^脚注]</span>：脚注文本。</code></pre></li><li>鼠标悬停即可查看。</li><li>脚注文本可置于文末。</li><li>脚注中使用英文冒号。</li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>基础工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>markdown</tag>
+      
+      <tag>学习笔记</tag>
+      
+    </tags>
     
   </entry>
   
