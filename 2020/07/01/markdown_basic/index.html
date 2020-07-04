@@ -182,7 +182,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      803 字
+      1k 字
     </span>
   
 
@@ -192,7 +192,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      11
        分钟
     </span>
   
@@ -223,7 +223,7 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <p>==总结自markdown官方文档==<br><em>不包含数学公式、YAML、HTML等内容，<del>太复杂了</del>在学了在学了</em>:cry:</p>
+              <p><strong>总结自markdown官方文档</strong><br><em>不包含数学公式、YAML、HTML等内容，<del>太复杂了</del>在学了在学了</em></p>
 <h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>markdown主要用两种形式表示标题：  </p>
 <ul>
 <li><p>使用 = 和 - 标记一级和二级标题：</p>
@@ -342,13 +342,12 @@
 <span class="hljs-strong">__粗体文本__</span></code></pre>
 <h2 id="粗斜体"><a href="#粗斜体" class="headerlink" title="粗斜体"></a><strong><em>粗斜体</em></strong></h2>使用<code>***</code>或<code>___</code><h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a><del>删除线</del></h2></li>
 <li>使用<code>~~</code>包裹文本。</li>
-<li>GFM增加了带有删除线文本的语法，这个功能在标准的Markdown中是没有的。<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a><em>强调</em></h2>使用<code>*</code>或<code>_</code>包裹文本。<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a><u>下划线</u></h2></li>
+<li>GFM增加了带有删除线文本的语法，这个功能在标准的Markdown中是没有的。<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a><u>下划线</u></h2></li>
 <li>由HTML实现。</li>
 <li>用<code>&lt;u&gt;文本&lt;/u&gt;</code>包裹文本即可。<h2 id="上标及下标"><a href="#上标及下标" class="headerlink" title="上标及下标"></a>上标及下标</h2></li>
 <li>可使用HTML语法创建。</li>
 <li>上标：使用<code>&lt;sup&gt;&lt;/sup&gt;</code>包裹文本，例<code>O&lt;sup&gt;2&lt;/sup&gt;</code>， 即O<sup>2</sup>。</li>
-<li>下标：使用<code>&lt;sub&gt;&lt;/sub&gt;</code>包裹文本，例<code>H&lt;sub&gt;2&lt;/sub&gt;</code>，即H<sub>2</sub>。<h2 id="字体颜色"><a href="#字体颜色" class="headerlink" title="字体颜色"></a>字体颜色</h2>使用如下规则创建：<pre><code class="hljs tex"><span class="hljs-formula">$<span class="hljs-tag">\<span class="hljs-name">color</span><span class="hljs-string">&#123;green&#125;</span><span class="hljs-string">&#123;绿色&#125;</span></span> $</span></code></pre>
-显示效果：$\color{green}{绿色} $<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2></li>
+<li>下标：使用<code>&lt;sub&gt;&lt;/sub&gt;</code>包裹文本，例<code>H&lt;sub&gt;2&lt;/sub&gt;</code>，即H<sub>2</sub>。<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2></li>
 <li>行内链接：<pre><code class="hljs markdown">[<span class="hljs-string">链接名称</span>](<span class="hljs-link">链接地址"Title"</span>)
 或
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">链接地址</span>&gt;</span></span></code></pre></li>
@@ -356,10 +355,69 @@
 <li>引用链接：<pre><code class="hljs markdown">[<span class="hljs-string">链接名称</span>][<span class="hljs-symbol">id</span>]
 在文档任意处定义链接：
 [<span class="hljs-symbol">id</span>]:<span class="hljs-link">链接地址 "Title"</span></code></pre></li>
-<li>适用于被定义的链接需多次使用。<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><h2 id="血泪教训"><a href="#血泪教训" class="headerlink" title="血泪教训"></a>血泪教训</h2></li>
+<li>适用于被定义的链接需多次使用。<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2>图片的语法格式和链接非常相似，只是它们需要在链接起始的地方加一个<code>!</code>字符。<pre><code class="hljs markdown">![<span class="hljs-string">图片备注</span>](<span class="hljs-link">链接地址</span>)</code></pre></li>
+<li>typora支持通过拖拽的方式把文件或者网页中的图片插入进来。点击图片之后，就能修改它的markdown源代码。如果拖拽的图片在正在编辑的文件的同一级或次一级目录中，将会使用相对路径。</li>
+<li>如果你正在使用markdown搭建网站，你需要在最开头的YAML Front Matters中加入<code>typora-root-url</code>属性，声明一个在你的本地电脑中预览图片的URL前缀。比如，在YAML Front Matters中输入<code>typora-root-url:/User/Abner/Website/typora.io/</code>，那么<code>![alt](/blog/img/test.png)</code>在Typora中就会被识别为<code>![alt](file:///User/Abner/Website/typora.io/blog/img/test.png)</code>。<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2>markdown支持以下符号前加上 \  以显示普通字符：<table>
+<thead>
+<tr>
+<th>字符</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\</td>
+<td>反斜线</td>
+</tr>
+<tr>
+<td>`</td>
+<td>反引号</td>
+</tr>
+<tr>
+<td>*</td>
+<td>星号</td>
+</tr>
+<tr>
+<td>_</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>花括号</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>方括号</td>
+</tr>
+<tr>
+<td>()</td>
+<td>小括号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>井字号</td>
+</tr>
+<tr>
+<td>+</td>
+<td>加号</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减号</td>
+</tr>
+<tr>
+<td>.</td>
+<td>英文句点</td>
+</tr>
+<tr>
+<td>!</td>
+<td>感叹号</td>
+</tr>
+</tbody></table>
+</li>
 </ul>
-<ul>
-<li>建议尽量使用- 以避免歧义 。</li>
+<h2 id="血泪教训"><a href="#血泪教训" class="headerlink" title="血泪教训"></a>血泪教训</h2><ul>
+<li>建议尽量使用<code>+</code>建立列表以与粗体、斜体避免歧义 。</li>
+<li>表格一定要加表头。</li>
 </ul>
 
             </article>
@@ -395,7 +453,7 @@
                     
                       <a href="/2020/07/04/markdown-advanced/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">markdown-advanced</span>
+                        <span class="hidden-mobile">markdown进阶语法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
