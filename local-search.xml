@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>arp</title>
+    <link href="/2020/10/23/arp/"/>
+    <url>/2020/10/23/arp/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一次ARP欺骗攻击复现"><a href="#一次ARP欺骗攻击复现" class="headerlink" title="一次ARP欺骗攻击复现"></a>一次ARP欺骗攻击复现</h1><h2 id="0-题目背景"><a href="#0-题目背景" class="headerlink" title="#0 题目背景"></a>#0 题目背景</h2><blockquote><p>复现ARP内网欺骗攻击，其中设置被欺骗的虚拟机的IP地址为192.168.92.135.（提示：设置虚拟机静态IP)  </p></blockquote><h2 id="1-ARP协议"><a href="#1-ARP协议" class="headerlink" title="#1 ARP协议"></a>#1 ARP协议</h2><p>主机发送信息时将包含目标IP地址的ARP请求向<strong>局域网络内</strong>所有主机广播，目标机接受后将会返回自己的物理地址。<strong>基于网络中的主机相互信任的前提</strong>，主机接受到返回的信息时将会直接写入自己的ARP缓存表中而不检查真实性，以供下一次直接读取使用。因此，若攻击机伪造ARP报文并向主机发送，主机就会根据错误的ARP报文刷新自己的缓存，以此达到攻击的目的。</p><p>本文复现单向欺骗靶机，即使靶机中的arp表的网关硬件地址从正确的硬件地址变为攻击机kali的硬件地址，从而实现流量劫持。</p><h2 id="2-设置虚拟机静态IP"><a href="#2-设置虚拟机静态IP" class="headerlink" title="#2 设置虚拟机静态IP"></a>#2 设置虚拟机静态IP</h2><p>这里以VMware中的win7虚拟机为例。</p><p>首先打开命令行窗口，输入</p><pre><code class="hljs ebnf"><span class="hljs-attribute">arp -a</span></code></pre><p>查看IP地址及MAC地址，发现并不是192.168.92.135，因此我们需要设置虚拟机静态IP。</p><ol><li>打开虚拟机中的虚拟网络编辑器（编辑 -&gt;虚拟网络编辑器），<img src="C:%5Cblog%5Cmyblog%5Csource_posts%5Cimg%5Carp-1.png" srcset="/img/loading.gif" alt=""></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>网络安全</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>复现</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>kruskal算法</title>
     <link href="/2020/08/29/kruskal/"/>
     <url>/2020/08/29/kruskal/</url>
