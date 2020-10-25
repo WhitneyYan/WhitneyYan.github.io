@@ -222,12 +222,17 @@
 
 <p>查看IP地址及MAC地址，发现并不是192.168.92.135，因此我们需要设置虚拟机静态IP。</p>
 <ol>
-<li>打开虚拟机中的虚拟网络编辑器（<code>编辑</code> -&gt;<code>虚拟网络编辑器</code>），<img src="arp-1.png" srcset="/img/loading.gif" alt="">,选择<code>更改设置</code>，并在打开的面板中选择<code>VMnet8</code>，VMnet信息中选择NAT模式，查看子网IP，发现并不是192.168.92.0 ，即将其修改为192.168.92.0。<img src="arp-2.png" srcset="/img/loading.gif" alt=""><blockquote>
+<li><p>打开虚拟机中的虚拟网络编辑器（<code>编辑</code> -&gt;<code>虚拟网络编辑器</code>），</p>
+<p><img src="arp-1.png" srcset="/img/loading.gif" alt="">,选择<code>更改设置</code>，并在打开的面板中选择<code>VMnet8</code>，VMnet信息中选择NAT模式，查看子网IP，发现并不是192.168.92.0 ，即将其修改为192.168.92.0。</p>
+<p><img src="arp-2.png" srcset="/img/loading.gif" alt=""></p>
+<blockquote>
 <p>说明：IP需在正确的网段内，即如果想将虚拟机静态IP设置为192.168.92.X，网段（子网IP）必须为192.168.92.0。这里使用0结尾，是因为用0结尾表示网络。</p>
 </blockquote>
 </li>
-<li>点击<code>NAT设置</code>，查看子网掩码和网关IP，后面将会使用到这两个数据。<img src="arp-3.png" srcset="/img/loading.gif" alt=""></li>
-<li>打开win7虚拟机，在网络设置中将IP地址改为192.168.92.135。其余设置见以下步骤。</li>
+<li><p>点击<code>NAT设置</code>，查看子网掩码和网关IP，后面将会使用到这两个数据。<img src="arp-3.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>打开win7虚拟机，在网络设置中将IP地址改为192.168.92.135。其余设置见以下步骤。</p>
+</li>
 </ol>
 <h2 id="0x03-设置本地主机虚拟网卡"><a href="#0x03-设置本地主机虚拟网卡" class="headerlink" title="0x03 设置本地主机虚拟网卡"></a>0x03 设置本地主机虚拟网卡</h2><ol>
 <li>搜索<code>查看网络连接</code>并打开，在<code>VMware Network Adapter VMnet8</code>上单击右键，选择属性按钮打开对话框。<img src="arp-4.png" srcset="/img/loading.gif" alt=""></li>
